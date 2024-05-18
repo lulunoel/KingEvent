@@ -1,0 +1,49 @@
+# PlaceHolderAPI
+
+# Placeholder de faction
+# %classement_top_{number}% {number} nombre entre 1 et 10
+# %classement_points_top_{number}% {number} nombre entre 1 et 10
+# %classement_membres_top_{number}% {number} nombre entre 1 et 10
+
+# Placeholder de membres (vois c'est propre info de faction)
+# %classement_info_points% info points de la faction d'une personne
+# %classement_info_membres% info membres de la faction d'une personne
+# %classement_info_nom% info nom de la faction d'une personne
+# %classement_points% info points d'une personne
+
+# Placeholder info par personne
+# %classement_info_player_name_<name>% info points d'une personne avec <name>
+# %classement_info_player_uuid_<UUID>% info points d'une personne avec <UUID>
+# %classement_info_faction_somme_id_<ID>% #Affiche la somme des points des joueurs de la faction ayant l'ID <ID>
+# %classement_info_faction_somme_nom_<name>% #Affiche les points de la faction ayant le nom <name>
+# %classement_id_info_faction_nom_<name>% Récupéré le nom avec l'id
+# %classement_name_info_faction_id_<ID>% Récupéré l'id avec le nom
+# %classement_info_faction_points_id_<ID>% #Affiche les points de la faction ayant l'ID <ID>
+# %classement_info_faction_points_nom_<nom>% #Affiche les points de la faction ayant le nom <nom>
+
+#
+# Configuration du plugin
+database:
+  host: "localhost"  # Adresse IP ou nom d'hôte de votre serveur MySQL
+  port: 3306         # Port de votre serveur MySQL
+  database: "minecraft_players"  # Nom de votre base de données
+  username: "root"   # Nom d'utilisateur de votre base de données
+  password: "password"  # Mot de passe de votre base de données
+  table_player: "Joueurs"   # Nom de la table pour stocker les informations des joueurs
+  table_faction: "Factions"
+
+# Config de base
+config:
+  ticks: 20 # Nombre de ticks
+  points: 10 # Points par défaults
+# Messages utilisés dans le plugin
+messages:
+  permission: '&cVous n''avez pas la permission d''executer cette commande.'
+  usage: '&cUsage: /classement <player|faction> <give|remove|reset> [player] [amount]'
+  invalidNumber: '&cIl faut un nombre de points correct.'
+  addPoints: '&a{amount} points ajoutes a {player}.'
+  removePoints: '&a{player} a perdue {amount} points.'
+  resetPoints: '&aTous les points sont retirer.'
+  addFactionPoints: '&a{amount} points ajoutes a {faction}.'
+  removeFactionPoints: '&a{faction} a perdue {amount} points.'
+  resetFactionPoints: '&aTous les points de faction sont retirer.'

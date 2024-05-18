@@ -1,0 +1,13 @@
+name: KingEvent
+version: '${project.version}'
+main: org.kingfight.kingevent.KingEvent
+api-version: '1.8.9'
+author: [Lulunoel2016]
+description: Plugin de gestion de points des factions
+permissions:
+  classement.classementpoints:
+    description: Gérer les points des joueurs
+    default: op
+commands:
+  classement:
+    description: Gérer les points des joueurs
